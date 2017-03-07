@@ -7,7 +7,7 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/"(view: "/matchHistory/matchHistory")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
