@@ -7,6 +7,7 @@ class MatchHistoryController {
     }
 
     def details() {
+
         println "hello, world"
     }
 }
