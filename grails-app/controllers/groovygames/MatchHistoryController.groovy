@@ -1,11 +1,9 @@
 package groovygames
 
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBAsyncClient
-import com.amazonaws.services.dynamodbv2.model.ListTablesResult
-
 class MatchHistoryController {
 
-    AmazonDynamoDBAsyncClient dynamoClient
+
+    def matchHistoryService
 
     def index() {
 
@@ -13,8 +11,7 @@ class MatchHistoryController {
 
     def details() {
 
-        ListTablesResult result = dynamoClient.listTables()
+        matchHistoryService.retrieve(params.playerId)
 
-        println result.tableNames[0]
     }
 }
